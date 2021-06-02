@@ -43,7 +43,7 @@ def clean_data(data):
 
     y_df = x_df.pop("y").apply(lambda s: 1 if s == "yes" else 0)
 
-    return x, y
+    return x_df, y_df
 
 datapath = "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
 ds = TabularDatasetFactory.from_delimited_files(path=datapath)
